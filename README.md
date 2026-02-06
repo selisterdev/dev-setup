@@ -23,7 +23,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-The script will ask for your Git username and email (unless you set them in `.env`), then it will generate an SSH key and show you the public key (it will pause so you can go over to GitHub and add it there), and it`ll install everything else automatically
+The script will ask for your Git username and email (unless you set them in `.env`), then it will generate an SSH key and show you the public key (it will pause so you can go over to GitHub and add it there), and it'll install everything else automatically
 
 
 ## After running
