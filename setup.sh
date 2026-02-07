@@ -10,7 +10,17 @@ echo "installing base dependencies..."
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl wget zip unzip zsh software-properties-common build-essential
 
+if [ -z "$WSL_DISTRO_NAME" ]; then
+    echo "Not running in WSL, installing VSCode and Chrome..."
 
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo apt install -y ./google-chrome-stable_current_amd64.deb
+    rm google-chrome-stable_current_amd64.deb
+
+    wget -O code-latest.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+    sudo apt install -y ./code-latest.deb
+    rm code-latest.deb
+fi
 
 # install latest git version
 echo "installing latest git..."
